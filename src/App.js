@@ -8,6 +8,8 @@ function App() {
   let [글제목, 글제목변경] = useState(['남자 코트 추천', '강남 우동 맛집', '비오는 날']); 
   let [따봉, 따봉변경] = useState(0);
 
+  let [modal, modal변경] = useState(false);
+
   // function 제목바꾸기(){
   //   var newArray = [...글제목];
   //   newArray[0] = '여자 코트 추천';
@@ -36,7 +38,7 @@ function App() {
         <hr/>
       </div>
       <div className="list">
-        <h3>{ 글제목[2] }</h3>
+        <h3 onClick={ ()=>{modal변경(true)}}>{ 글제목[2] }</h3>
         <p>2월 19일 발행</p>
         <hr/>
       </div>
@@ -48,7 +50,12 @@ function App() {
         <p>상세내용</p>
       </div>  */}
 
-      <Modal></Modal>
+      {
+        modal === true
+        ? <Modal></Modal>
+        : null
+      }
+
 
     </div>
   );
@@ -71,6 +78,17 @@ function Modal(){
         <h2>제목</h2>
         <p>날짜</p>
         <p>상세내용</p>
+    </div>
+  )
+}
+
+
+function ListItem(){
+  return (
+    <div className="list">
+      <h3>{ 글제목[2] }</h3>
+      <p>2월 19일 발행</p>
+      <hr/>
     </div>
   )
 }
