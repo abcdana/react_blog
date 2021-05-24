@@ -43,6 +43,7 @@ function App() {
         <hr/>
       </div>
 
+      <button onClick={ ()=>{modal변경(!modal) }}>버튼</button>
 
       {/* <div className="modal">
         <h2>제목</h2>
@@ -55,8 +56,6 @@ function App() {
         ? <Modal></Modal>
         : null
       }
-
-      <ListItem></ListItem>
 
 
     </div>
@@ -84,15 +83,5 @@ function Modal(){
   )
 }
 
-
-function ListItem(){
-  return (
-    <div className="list">
-      <h3>{ 글제목[2] }</h3>
-      <p>2월 19일 발행</p>
-      <hr/>
-    </div>
-  )
-}
 
 export default App;
