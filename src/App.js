@@ -43,7 +43,22 @@ function App() {
         <hr/>
       </div>
 
-      <button onClick={ ()=>{modal변경(!modal) }}>버튼</button>
+      {/* 중괄호 안에 넣을 수 있는 반복문 -> 함수 */}
+      {
+        // a는 각 하나하나의 데이터이다.
+        글제목.map(function(a){
+          return (
+                  <div className="list">
+                    <h3>{ a }</h3>
+                    <p>2월 18일 발행</p>
+                    <hr/>
+                  </div>
+          )
+        })
+
+      }
+
+      {/* <button onClick={ ()=>{modal변경(!modal) }}>버튼</button> */}
 
       {/* <div className="modal">
         <h2>제목</h2>
