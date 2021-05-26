@@ -46,6 +46,7 @@ function App() {
       {/* 중괄호 안에 넣을 수 있는 반복문 -> 함수 */}
       {
         // a는 각 하나하나의 데이터이다.
+        // 데이터 자체가 반복시마다 바뀌기 때문에 tag안의 값도 바뀐다.
         글제목.map(function(a){
           return (
                   <div className="list">
