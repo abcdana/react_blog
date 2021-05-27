@@ -10,6 +10,17 @@ function App() {
 
   let [modal, modal변경] = useState(false);
 
+  function repeatUI(){
+
+    var array = [];
+    for (var i = 0; i < 3; i++){
+      array.push(<div>안녕</div>);
+    }
+
+    return array
+  }
+  
+
   // function 제목바꾸기(){
   //   var newArray = [...글제목];
   //   newArray[0] = '여자 코트 추천';
@@ -42,6 +53,8 @@ function App() {
         <p>2월 19일 발행</p>
         <hr/>
       </div>
+
+      { repeatUI() }
 
       {/* 중괄호 안에 넣을 수 있는 반복문 -> 함수 */}
       {
