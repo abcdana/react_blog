@@ -10,6 +10,7 @@ function App() {
 
   let [modal, modal변경] = useState(false);
 
+
   function repeatUI(){
 
     var array = [];
@@ -63,7 +64,7 @@ function App() {
         글제목.map(function(a){
           return (
                   <div className="list">
-                    <h3>{ a }</h3>
+                    <h3>{ a } <span onClick={ ()=>{ 따봉변경(따봉 + 1) } }>👍</span> { 따봉 }</h3>
                     <p>2월 18일 발행</p>
                     <hr/>
                   </div>
