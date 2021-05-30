@@ -31,6 +31,7 @@ function App() {
   // let posts = '강남 고기 맛집';
 
   // #### modal창으로 만드는 상세페이지
+  // 상세페이지 추가
 
 
   return (
