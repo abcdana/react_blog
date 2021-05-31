@@ -74,7 +74,7 @@ function App() {
 
       }
 
-      {/* <button onClick={ ()=>{modal변경(!modal) }}>버튼</button> */}
+      <button onClick={ ()=>{modal변경(!modal) }}>버튼</button> 
 
       {/* <div className="modal">
         <h2>제목</h2>
@@ -84,7 +84,7 @@ function App() {
 
       {
         modal === true
-        ? <Modal></Modal>
+        ? <Modal> 글제목={글제목} </Modal>
         : null
       }
 
@@ -104,10 +104,10 @@ function App() {
 
 
 // Component 문법
-function Modal(){
+function Modal(props){
   return (
     <div className="modal">
-        <h2>제목</h2>
+        <h2> { props.글제목[0] } </h2>
         <p>날짜</p>
         <p>상세내용</p>
     </div>
