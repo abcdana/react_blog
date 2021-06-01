@@ -74,7 +74,7 @@ function App() {
 
       }
 
-      <button onClick={ ()=>{modal변경(!modal) }}>버튼</button> 
+      <button onClick={ ()=>{modal변경(!modal) }}>열고닫기</button> 
 
       {/* <div className="modal">
         <h2>제목</h2>
@@ -91,6 +91,7 @@ function App() {
 
     </div>
   );
+}
 
   // <주의> return 안에는 <div>하나의 태그만 존재할 수 있다. 평행으로 여러개의 태그를 만들 수 없다. 아래와 같이 설계 불가능!
 
@@ -100,7 +101,6 @@ function App() {
   //   <div></div>
   // )
 
-}
 
 
 // Component 문법
