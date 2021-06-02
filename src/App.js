@@ -116,3 +116,7 @@ function Modal(props){
 
 
 export default App;
+
+
+
+// TODO : // 0을 찾을 수 없다는 에러 이유 찾기!!
