@@ -76,6 +76,10 @@ function App() {
 
       <button onClick={ ()=>{modal변경(!modal) }}>열고닫기</button> 
 
+      <button onClick={()=>{}}>버튼1</button>
+      <button onClick={()=>{}}>버튼2</button>
+      <button onClick={()=>{}}>버튼3</button>
+
       {/* <div className="modal">
         <h2>제목</h2>
         <p>날짜</p>
