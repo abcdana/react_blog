@@ -3,4 +3,4 @@ React practice
 blog
 
 
-Front
+Front end
