@@ -10,28 +10,11 @@ function App() {
 
   let [modal, modal변경] = useState(false);
 
+  var array = [2, 3, 4];
 
-  function repeatUI(){
-
-    var array = [];
-    for (var i = 0; i < 3; i++){
-      array.push(<div>안녕</div>);
-    }
-
-    return array
-  }
-  
-
-  // function 제목바꾸기(){
-  //   var newArray = [...글제목];
-  //   newArray[0] = '여자 코트 추천';
-  //   글제목변경( newArray );
-  // }
-
-  // let posts = '강남 고기 맛집';
-
-  // #### modal창으로 만드는 상세페이지
-  // 상세페이지 추가
+  var newArray = array.map(function(a){
+    return a * 2
+  });
 
 
   return (
@@ -39,7 +22,7 @@ function App() {
       <div className="black-nav">
         <div>개발 blog</div>
       </div>
-      {/* <button onClick={ 제목바꾸기 }>버튼</button> */}
+
       <div className="list">
         <h3>{ 글제목[0] } <span onClick={ ()=>{ 따봉변경(따봉 + 1) } }>👍</span> { 따봉 } </h3>
         <p>2월 17일 발행</p>
@@ -56,62 +39,38 @@ function App() {
         <hr/>
       </div>
 
-      { repeatUI() }
-
-      {/* 중괄호 안에 넣을 수 있는 반복문 -> 함수 */}
-      {
-        // a는 각 하나하나의 데이터이다.
-        // 데이터 자체가 반복시마다 바뀌기 때문에 tag안의 값도 바뀐다.
-        글제목.map(function(a){
-          return (
-                  <div className="list">
-                    <h3>{ a } <span onClick={ ()=>{ 따봉변경(따봉 + 1) } }>👍</span> { 따봉 }</h3>
+      { 
+        글제목.map(function(글){
+          return ( <div className="list">
+                    <h3>{ 글 }<span onClick={ ()=>{ 따봉변경(따봉 + 1) } }>👍</span> { 따봉 }</h3>
                     <p>2월 18일 발행</p>
                     <hr/>
                   </div>
-          )
+        )
         })
-
+      
       }
 
+     
       <button onClick={ ()=>{modal변경(!modal) }}>열고닫기</button> 
 
-      <button onClick={()=>{}}>버튼1</button>
-      <button onClick={()=>{}}>버튼2</button>
-      <button onClick={()=>{}}>버튼3</button>
-
-      {/* <div className="modal">
-        <h2>제목</h2>
-        <p>날짜</p>
-        <p>상세내용</p>
-      </div>  */}
 
       {
-        modal === true
-        ? <Modal> 글제목={글제목} </Modal>
+        modal === true 
+        ? <Modal 글제목 = {글제목}></Modal>
         : null
       }
-
 
     </div>
   );
 }
-
-  // <주의> return 안에는 <div>하나의 태그만 존재할 수 있다. 평행으로 여러개의 태그를 만들 수 없다. 아래와 같이 설계 불가능!
-
-  // return (
-  //   <div></div>
-  //   <div></div>
-  //   <div></div>
-  // )
-
 
 
 // Component 문법
 function Modal(props){
   return (
     <div className="modal">
-        <h2> { props.글제목[0] } </h2>
+        <h2>{ props.글제목[0] }</h2>
         <p>날짜</p>
         <p>상세내용</p>
     </div>
