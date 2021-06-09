@@ -26,6 +26,10 @@
   padding-right : 20px;
 }
 
+.list h3 {
+  cursor : pointer;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
