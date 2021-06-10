@@ -38,6 +38,8 @@ function App() {
       <div className="list">
         <h3 onClick={ ()=>{modal변경(true)}}>{ 글제목[2] }</h3>
         <p>2월 19일 발행</p>
+
+        <p>
         <hr/>
       </div> */}
 
