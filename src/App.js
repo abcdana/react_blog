@@ -32,6 +32,8 @@ function App() {
       </div>
       <div>
       </div>
+      <div>
+      </div>
       <div className="list">
         <h3>{ 글제목[1] }</h3>
         <p>2월 18일 발행</p>
