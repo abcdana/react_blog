@@ -12,11 +12,9 @@ function App() {
 
   let [누른제목, 누른제목변경] = useState(0);
 
-  var array = [2, 3, 4];
+  let [입력값, 입력값변경] = useState('');
+ 
 
-  var newArray = array.map(function(a){
-    return a * 2
-  });
 
 
   return (
@@ -25,31 +23,11 @@ function App() {
         <div>개발 blog</div>
       </div>
 
-      {/* <div className="list">
-        <h3>{ 글제목[0] } <span onClick={ ()=>{ 따봉변경(따봉 + 1) } }>👍</span> { 따봉 } </h3>
-        <p>2월 17일 발행</p>
-        <hr/>
-      </div>
-      <div>
-      </div>
-      <div>
-      </div>
-      <div className="list">
-        <h3>{ 글제목[1] }</h3>
-        <p>2월 18일 발행</p>
-        <hr/>
-      </div>
-      <div className="list">
-        <h3 onClick={ ()=>{modal변경(true)}}>{ 글제목[2] }</h3>
-        <p>2월 19일 발행</p>
 
-        <p>
-        <hr/>
-      </div> */}
 
       { 
         글제목.map(function(글, i){
-          return ( <div className="list">
+          return ( <div className="list" key={i}>
                     <h3 onClick={ ()=>{ 누른제목변경(i) }}> { 글 }
                       <span onClick={ ()=>{ 따봉변경(따봉 + 1) } }>👍</span> { 따봉 }
                     </h3>
@@ -61,9 +39,10 @@ function App() {
       
       }
 
-      <button onClick={ ()=>{ 누른제목변경(0)} }>버튼1</button>
-      <button onClick={ ()=>{ 누른제목변경(1)} }>버튼2</button>
-      <button onClick={ ()=>{ 누른제목변경(2)} }>버튼3</button>
+
+      {/* react에서는 onChange 와 onInput의 결과가 똑같기 때문에 혼용해서 사용한다. */}
+      <input onChange={ (e)=>{ 입력값변경(e.target.value) } }></input>
+
 
       <button onClick={ ()=>{modal변경(!modal) }}>열고닫기</button> 
 
@@ -94,7 +73,3 @@ function Modal(props){
 
 export default App;
 
-
-
-// TODO : // 0을 찾을 수 없다는 에러 이유 찾기!!
-// 20210606 현재까지 못찾음..
