@@ -40,14 +40,18 @@ function App() {
       }
 
 
-      {/* react에서는 onChange 와 onInput의 결과가 똑같기 때문에 혼용해서 사용한다. */}
-      <input onChange={ (e)=>{ 입력값변경(e.target.value) } }></input>
+      {/* react에서는 onChange 와 onInput의 결과가 똑같기 때문에 혼용해서 사용한다.
+      <input onChange={ (e)=>{ 입력값변경(e.target.value) } }></input> */}
 
 
       <div className="publish">
-        <input />
-        <button>저장</button>
+        <input onChange={ (e)=>{ 입력값변경(e.target.value) } }/>
+        <button onClick={ ()=>{
+          글제목변경()
+        } }>저장</button>
       </div>
+
+
 
 
       <button onClick={ ()=>{modal변경(!modal) }}>열고닫기</button> 
