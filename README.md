@@ -3,4 +3,4 @@ React practice
 blog
 
 
-Front end
+Front end library
